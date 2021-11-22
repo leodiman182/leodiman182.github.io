@@ -13,6 +13,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100vh;
     width: 100%;
@@ -21,6 +25,10 @@ body {
     text-align: center;
     font-family: 'Epilogue', sans-serif;
     background: rgb(238, 238, 238);
+}
+
+main {
+    margin:5vh 25vw;
 }
 
 section {
@@ -36,9 +44,15 @@ ul {
     list-style-type: none;
 }
 
+h2 {
+    font-size:3.8vh;
+}
+
 h3 {
     padding: 1vh;
-    font-size: 5vh;
+    font-size: 3.5vh;
+
+    color: var(--second-green);
 }
 
 p {
@@ -50,25 +64,24 @@ hr {
     background: linear-gradient(270deg, var(--primary-green), var(--second-green))
 }
 
-
 /*=================HEADER===================*/
 
 header {
     height: 15vh;
 
-    background-image: linear-gradient(var(--primary-green), var(--second-green));
+    background-image: linear-gradient( 90deg, var(--second-green), var(--primary-green));
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    border-bottom: 2px black solid;
 }
 
 header h1 {
     padding: 2vh;
     color: #fff;
     font-size: 6vh;
+
+    cursor: default;
 }   
 
 header ul {
@@ -78,26 +91,22 @@ header ul {
 
 header ul li {
     padding: 0 6vh;
-    opacity: 0.7;
+    opacity: 0.8;
     font-size: 2.6vh;
 
     transition: 0.2s;
 }
 
 header ul li:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
     font: 700;
     opacity: 1;
+
+    text-shadow: 2px 2px rgba(77, 77, 77, 0.63);
 }
 
 header ul li a {
     color: #fff;
-}
-
-/*=================MAIN===================*/
-
-main {
-    margin:5vh 25vw;
 }
 
 /*=================HEAD===================*/
@@ -109,10 +118,16 @@ main {
     align-items: center;
 }
 
-.port-head img {    
+.port-head img {
     border-radius: 2vh;
     width: auto;
     max-height: 40vh;
+
+    transition: 0.1s;
+}
+
+.port-head img:hover {
+    transform: scale(1.1);
 }
 
 .names {
@@ -120,11 +135,18 @@ main {
     flex-direction: column;
     text-align: start;
     margin-left: 4vh;
+
+    text-align: justify;
 }
 
 .names h2 {
     color: var(--second-green);
 }
+
+.subname {
+    font-size: 3vh;
+}
+
 
 /*=================ABOUT-ME===================*/
 
@@ -140,6 +162,15 @@ main {
 
 .back-to-top p {
     margin-top: 1vh;
+
+    font-size: 1.5rem;
+
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+.back-to-top p:hover {
+    opacity: 1;
 }
 
 /*=================SKILLS===================*/
@@ -155,7 +186,7 @@ main {
 
 footer {
     height: 20vh;
-    background-image: linear-gradient(var(--primary-green), var(--second-green));
+    background-image: linear-gradient( 90deg, var(--primary-green), var(--second-green));
 
     align-items: center;
     justify-content: center;
@@ -170,9 +201,44 @@ footer {
     max-height: 8vh;
     filter: invert();
     padding: 0px 5vh;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .footer-imgs img:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
+}
+
+/*=================RESPONSIVENESS===================*/
+
+
+@media (max-width: 1432px) {
+    header ul li {
+        font-size: 3vh;
+        padding: 0 3vh;
+    }
+}
+
+@media (max-width: 1176px) {
+    header h1 {
+        font-size:4vh;
+    }
+
+    .port-head {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .port-head {
+        justify-items: center;
+    }
+    
+    .names {
+        margin-left: 0;
+        margin-top: 5vh;
+        text-align: justify;
+    }
+
+    .names h2, .subname {
+        text-align: center;
+    }
 }
