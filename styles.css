@@ -66,33 +66,35 @@ hr {
 
 /*=================HEADER===================*/
 
-header {
-    height: 15vh;
+header {    
+    height: 17vh;
 
-    background-image: linear-gradient( 90deg, var(--second-green), var(--primary-green));
+    background-image: linear-gradient( 90deg, var(--primary-green), var(--second-green));
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    font-family: 'Bebas Neue', cursive;
 }
 
-header h1 {
-    padding: 2vh;
-    color: #fff;
-    font-size: 6vh;
-
+header img {
+    padding: 2vh;    
+    height: auto;
+    width: 18vw;
     cursor: default;
+    margin-left: 2vh;
 }   
 
 header ul {
     display: flex;
     justify-content: flex-end;
-}
+}   
 
 header ul li {
     padding: 0 6vh;
     opacity: 0.8;
-    font-size: 2.6vh;
+    font-size: 6vh;
 
     transition: 0.2s;
 }
@@ -107,6 +109,7 @@ header ul li:hover {
 
 header ul li a {
     color: #fff;
+    font:'Bebas Neue', cursive;
 }
 
 /*=================HEAD===================*/
@@ -213,7 +216,7 @@ footer {
 
 @media (max-width: 1432px) {
     header ul li {
-        font-size: 3vh;
+        font-size: 5vh;
         padding: 0 3vh;
     }
 }
