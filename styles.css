@@ -214,18 +214,14 @@ footer {
 /*=================RESPONSIVENESS===================*/
 
 
-@media (max-width: 1432px) {
+@media (max-width: 1433px) {
     header ul li {
-        font-size: 5vh;
+        font-size: 3vh;
         padding: 0 3vh;
     }
 }
 
 @media (max-width: 1176px) {
-    header h1 {
-        font-size:4vh;
-    }
-
     .port-head {
         display: flex;
         flex-direction: column;
