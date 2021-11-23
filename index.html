@@ -7,7 +7,8 @@
 
 
     <!-- LINKS -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,20 +18,29 @@
     <title>Leonardo Diman | Desenvolvedor Web</title>
 </head>
 <body>
-    <header>        
-            <img src="./images/111-1112693_portfolio-my-portfolio.png" alt="Meu Portfólio">
 
-            <div class="menu">        
-                <ul class="grid">
-                    <li><a href="#head">Quem sou eu?</a></li>
-                    <li><a href="#about-me">Sobre mim</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                    <li><a target="_blank" href="http://prosainterior.com.br/">Meu Podcast</a></li>
-                </ul>    
-            </div>            
+    <header id="header">
+        <img src="./images/111-1112693_portfolio-my-portfolio.png" alt="Meu Portfólio">
         
+        <div class="menu-wrap">
+            <input id="checkbox" type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul>
+                            <li><a href="#head">Quem sou eu?</a></li>
+                            <li><a href="#about-me">Sobre mim</a></li>
+                            <li><a href="#skills">Habilidades</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                            <li><a target="_blank" href="http://prosainterior.com.br/">Meu Podcast</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
+
     <main>
 
         <section id="head" class="port-head">
@@ -60,21 +70,19 @@
                 Desce cedo tendo contato com jogos, sempre me interessei pela tecnologia. Tenho gostado cada vez mais de programar e descobrir as infinitas possibilidades do mundo dos códigos. Amo viajar, conhecer diferentes culturas e lugares, me comunicar com diferentes pessoas e compartilhar experiências e histórias.
             </p>
 
-        </section>
-
-        <hr>
+        </section>        
 
         <section id="skills">
 
             <h3>Habilidades</h3>
             <ul>
-                <li><strong>Inglês fluente</strong></li>
+                <li class="unpair"><strong>Inglês fluente</strong></li>
                 <li><strong>Comunicação</strong></li>
-                <li>Criatividade</li>
+                <li class="unpair">Criatividade</li>
                 <li>HTML básico</li>
-                <li>CSS básico</li>
+                <li class="unpair">CSS básico</li>
                 <li>JavaScript básico</li>
-                <li>Premiere</li>
+                <li class="unpair">Premiere</li>
                 <li>Photoshop</li>
             </ul>
 
@@ -86,13 +94,15 @@
         </a>  
 
     </main>
+
     <footer>
         <div id="contact" class="footer-imgs">
-            <a target="_blank" href="https://github.com/leodiman182"><img src="./images/25231.png" alt="Logo Github"></a>
-            <a target="_blank" href="https://www.linkedin.com/in/leonardo-diman-martins-b16439173/"><img src="./images/49656.png" alt="Logo Linkedin"></a>
+            <a target="_blank" href="https://github.com/leodiman182"><img src="./images/output.png" alt="Logo Github"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/leonardo-diman-martins-b16439173/"><img src="./images/linkedin2.png" alt="Logo Linkedin"></a>
         </div>
     </footer>    
 
     <script src="scripts.js"></script>
+    
 </body>
 </html>

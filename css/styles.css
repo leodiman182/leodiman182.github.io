@@ -18,16 +18,17 @@ html {
 }
 
 body {
+    font-family: 'Epilogue', sans-serif;
     height: 100vh;
     width: 100%;
     margin: 0 auto;
+    margin-top: 25vh;
 
     text-align: center;
-    font-family: 'Epilogue', sans-serif;
     background: rgb(238, 238, 238);
 
     font-size: 2.2vh;
-}
+}    
 
 main {
     margin:5vh 5vw;
@@ -68,11 +69,13 @@ hr {
 
 /*=================HEADER===================*/
 
-header {    
+header {
+    top: 0;
+    position: fixed;    
     height: 17vh;
     width: 100%;
 
-    background-image: linear-gradient( 90deg, var(--primary-green), var(--second-green));
+    background-image: linear-gradient(90deg, var(--primary-green), var(--second-green));
 
     display: flex;
     flex-direction: row;
@@ -84,14 +87,9 @@ header {
 
 header img {
     margin-left: 2vh;
-    height: auto;
+    max-height: 15vh;
     padding: 2vh;    
-    width: 40vw;
-}
-
-header ul {
-    display: flex;
-    justify-content: flex-end;
+    width: auto;
 }
 
 header ul li {
@@ -126,8 +124,8 @@ header ul li a {
 .port-head img {
     border-radius: 50vh;
     transition: 0.1s;
-    max-width: 45vh;
-    height: auto;  
+    max-width: 35vh;
+    height: auto;
 }
 
 .names {
@@ -151,29 +149,38 @@ header ul li a {
     line-height: 1.6;
 }
 
+/*=================SKILLS===================*/
+
+#skills ul {
+    grid-template-columns: 1fr 1fr;    
+    margin-top: 3vh;
+    line-height: 1.6;
+    text-align:center;      
+}
+
+.unpair {    
+    text-shadow: -1px -1px 1px var(--primary-green);
+}
+
+
+/*=================BACK TO TOP BUTTON===================*/
+
+
 .back-to-top {    
-    align-items: center;
+    align-items: center;    
 }
 
 .back-to-top p {
     margin-top: 1vh;
 
-    font-size: 1.5rem;
-
-    opacity: 0.7;
+    font-size: 1.5rem;    
     transition: 0.1s;
+
+    color: var(--second-green);
 }
 
 .back-to-top p:hover {
-    opacity: 1;
-}
-
-/*=================SKILLS===================*/
-
-#skills ul {
-    margin-top: 3vh;
-    line-height: 1.6;
-    text-align:center;
+    color: var(--primary-green);
 }
 
 /*=================FOOTER===================*/
@@ -192,8 +199,7 @@ footer {
 }
 
 .footer-imgs img {
-    max-height: 8vh;
-    filter: invert();
+    max-height: 8vh;    
     padding: 0px 5vh;
     transition: 0.1s;
 }
@@ -204,75 +210,82 @@ footer {
 
 /*=================RESPONSIVENESS===================*/
 
-/*
-//  desktops, large screens
+
+  /* desktops, large screens */
 @media (min-width: 1024px) {
 
     main {
-        margin:5vh 25vw;
+        margin:5vh 15vw;
     }
 
-    header img {    
-        width: 18vw;
-        cursor: default;   
-    }
+    /* 
 
+    header ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
     header ul li {
-        padding: 0 6vh;
+        padding: 0 1vh;
         opacity: 0.8;
-        font-size: 4vh;
-
+        font-size: 1vh;
         transition: 0.2s;
     }
+    
+    header ul li:hover {
+        transform: scale(1.2);
+        font: 700;
+        opacity: 1;
+    
+        text-shadow: 2px 2px rgba(77, 77, 77, 0.63);
+    }
+    
+    header ul li a {
+        color: #fff;
+        font:'Bebas Neue', cursive;
+    }    
 
+     */
+    
     .port-head {
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        font-size: 1.2rem;
     }
 
     .port-head img {
         width: auto;
-        max-height: 40vh;
+        max-height: 42vh;
 
-        border-radius: 5vh;
-    }
-
-    .port-head img:hover {
-        transform: scale(1.1);
-    }
+        border-radius: 2vh;
+    } 
 
     .names {
         display: flex;
         flex-direction: column;
         text-align: start;
+        margin-top: 0;
         margin-left: 4vh;
 
         text-align: justify;
     }
+
+    .names h2 {
+        font-size: 1.65rem;
+    }
+
+    .names .subname {
+        font-size: 1.4rem;
+    }
 }
 
 
-//  extra large screens
+/* extra large screens */
 
 @media (min-width: 1200px) {
-    .port-head {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .port-head {
-        justify-items: center;
-    }
-    
-    .names {
-        margin-left: 0;
-        margin-top: 5vh;
-        text-align: justify;
-    }
-
-    .names h2, .subname {
-        text-align: center;
+    main {
+        margin:5vh 20vw;
     }
 }
-*/
