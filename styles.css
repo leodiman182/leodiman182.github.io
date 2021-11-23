@@ -25,10 +25,12 @@ body {
     text-align: center;
     font-family: 'Epilogue', sans-serif;
     background: rgb(238, 238, 238);
+
+    font-size: 2.2vh;
 }
 
 main {
-    margin:5vh 25vw;
+    margin:5vh 5vw;
 }
 
 section {
@@ -68,10 +70,12 @@ hr {
 
 header {    
     height: 17vh;
+    width: 100%;
 
     background-image: linear-gradient( 90deg, var(--primary-green), var(--second-green));
 
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
@@ -79,23 +83,21 @@ header {
 }
 
 header img {
-    padding: 2vh;    
-    height: auto;
-    width: 18vw;
-    cursor: default;
     margin-left: 2vh;
-}   
+    height: auto;
+    padding: 2vh;    
+    width: 40vw;
+}
 
 header ul {
     display: flex;
     justify-content: flex-end;
-}   
+}
 
 header ul li {
-    padding: 0 6vh;
+    padding: 0 1vh;
     opacity: 0.8;
-    font-size: 6vh;
-
+    font-size: 1vh;
     transition: 0.2s;
 }
 
@@ -114,32 +116,23 @@ header ul li a {
 
 /*=================HEAD===================*/
 
-
 .port-head {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-items: center;
     align-items: center;
 }
 
 .port-head img {
-    border-radius: 2vh;
-    width: auto;
-    max-height: 40vh;
-
+    border-radius: 50vh;
     transition: 0.1s;
-}
-
-.port-head img:hover {
-    transform: scale(1.1);
+    max-width: 45vh;
+    height: auto;  
 }
 
 .names {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    margin-left: 4vh;
-
-    text-align: justify;
+    text-align: center;
+    margin-top: 5vh;
 }
 
 .names h2 {
@@ -149,7 +142,6 @@ header ul li a {
 .subname {
     font-size: 3vh;
 }
-
 
 /*=================ABOUT-ME===================*/
 
@@ -184,7 +176,6 @@ header ul li a {
     text-align:center;
 }
 
-
 /*=================FOOTER===================*/
 
 footer {
@@ -213,15 +204,58 @@ footer {
 
 /*=================RESPONSIVENESS===================*/
 
+/*
+//  desktops, large screens
+@media (min-width: 1024px) {
 
-@media (max-width: 1433px) {
+    main {
+        margin:5vh 25vw;
+    }
+
+    header img {    
+        width: 18vw;
+        cursor: default;   
+    }
+
     header ul li {
-        font-size: 3vh;
-        padding: 0 3vh;
+        padding: 0 6vh;
+        opacity: 0.8;
+        font-size: 4vh;
+
+        transition: 0.2s;
+    }
+
+    .port-head {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .port-head img {
+        width: auto;
+        max-height: 40vh;
+
+        border-radius: 5vh;
+    }
+
+    .port-head img:hover {
+        transform: scale(1.1);
+    }
+
+    .names {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin-left: 4vh;
+
+        text-align: justify;
     }
 }
 
-@media (max-width: 1176px) {
+
+//  extra large screens
+
+@media (min-width: 1200px) {
     .port-head {
         display: flex;
         flex-direction: column;
@@ -241,3 +275,4 @@ footer {
         text-align: center;
     }
 }
+*/
